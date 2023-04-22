@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+
+
+    <title>Document</title>
+    <script src="scripts/object.js"></script>
+    <script src="scripts/data.js"></script>
+
+</head>
+
+<body>
+    <h1>Your Screen Resolution is: <span id="resolution"></span> </h1>
+    <h1>Your Browser Viewport is: <span id="viewport"></span> </h1>
+    <div id="data"></div>
+    <select id="myDropdown" onchange="monitorSelection()">
+        <option value="option0">Select Monitor</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+    </select>
+
+
+    <table id="monitorTable">
+        <thead>
+            <tr>
+                <th>Manufacturer</th>
+                <th>Model</th>
+                <th>Connection Type</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Colour</th>
+                <th>Resolution</th>
+                <th>Display Type</th>
+                <th>Refresh Rate</th>
+                <th>Response Time</th>
+                <th>Colour Depth</th>
+                <th>VESA Compatible</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="monitorRow"></tr>
+        </tbody>
+    </table>
+    <h2 id="monitor-title"></h2>
+    <div id="monitorImage"></div>
+    <div id="checkResolution"></div>
+
+    <script>
+
+    </script>
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>
