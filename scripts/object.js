@@ -22,14 +22,14 @@ class Monitor extends ComputerPeripherals {
 
     }
     checkResolution() {
-        let resCheck = "Null"
+        let resCheck = null
 
         if (screen.width * screen.height < this.horiResolution * this.vertResolution) {
-            resCheck = "Lesser"
+            resCheck = "Your Screen Resolution is Less than the " + this.model
         } else if (screen.width * screen.height > this.horiResolution * this.vertResolution) {
-            resCheck = "Greater"
+            resCheck = "Your screen resolution is higher than the " + this.model
         } else {
-            resCheck = "Equal to"
+            resCheck = "Your screen resolution is the same as the " + this.model
         }
 
         document.getElementById("checkResolution").innerHTML = resCheck
@@ -46,7 +46,7 @@ class Monitor extends ComputerPeripherals {
           <td>${this.price}</td>
           <td>${this.colour}</td>
           <td>${this.displayTech}</td>
-          <td>${this.horiResolution} " x " ${this.vertResolution}</td>
+          <td>${this.horiResolution} x ${this.vertResolution}</td>
           <td>${this.refreshRate}</td>
           <td>${this.responseTime}</td>
           <td>${this.colourDepth}</td>
@@ -122,7 +122,3 @@ class GamePad extends ComputerPeripherals {
 }
 
 
-// let Phone1 = new MobilePhone("samsung", "S20", 128, "Vodafone");
-// let Tablet1 = new Tablet("LG", "2012", 64, 1080);
-// Phone1.display();
-// Tablet1.display();

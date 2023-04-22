@@ -50,7 +50,7 @@ function clearSelection() {
         `;
     let descImage = document.getElementById("monitorImage");
     descImage.innerHTML = `<img class="monitorimg" />`
-    document.getElementById("checkResolution").innerHTML = "";
+    document.getElementById("checkResolution").innerHTML = ""
     document.getElementById("monitor-title").innerHTML = "";
 }
 
