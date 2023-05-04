@@ -32,31 +32,72 @@ function monitorSelection() {
     }
 }
 
+
+
+
 function clearSelection() {
-    let monitorRow = document.getElementById("monitorRow");
+    let monitorRow = document.getElementById("monitorTable2");
     monitorRow.innerHTML = `
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+    <thead>
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</tbody>
         `;
     let descImage = document.getElementById("monitorImage");
-    descImage.innerHTML = `<img class="monitorimg" />`
-    document.getElementById("checkResolution").innerHTML = ""
+    descImage.innerHTML = `<img class="monitorimg" />`;
+    document.getElementById("checkResolution").innerHTML = "";
     document.getElementById("monitor-title").innerHTML = "";
 }
 
 document.getElementById("resolution").innerHTML = screen.width + " x " + screen.height;
-
-
 
 
 
@@ -66,3 +107,7 @@ window.addEventListener("resize", () => {
     const height = window.innerHeight;
     document.getElementById("viewport").innerHTML = width + " x " + height;
 });
+
+
+
+

@@ -1,47 +1,77 @@
-{
-    "monitor1": [
-      {
-        "manufacturer": "LG",
-        "model": "Model1",
-        "connectionType": "Display Port",
-        "type": "Output Device",
-        "price": 600,
-        "colour": "Black & Red",
-        "resolution": "2560 x 1440",
-        "refreshRate": "144Hz",
-        "responseTime": "1ms",
-        "colourDepth": "24 bit",
-        "vesa": true
-      }
-    ],
-    "monitor2": [
-      {
-        "manufacturer": "Dell",
-        "model": "Model2",
-        "connectionType": "HDMI",
-        "type": "Output Device",
-        "price": 400,
-        "colour": "Silver",
-        "resolution": "1920 x 1080",
-        "refreshRate": "60Hz",
-        "responseTime": "5ms",
-        "colourDepth": "16 bit",
-        "vesa": false
-      }
-    ],
-    "monitor3": [
-      {
-        "manufacturer": "Asus",
-        "model": "Model3",
-        "connectionType": "USB-C",
-        "type": "Output Device",
-        "price": 800,
-        "colour": "Black",
-        "resolution": "3840 x 2160",
-        "refreshRate": "60Hz",
-        "responseTime": "4ms",
-        "colourDepth": "32 bit",
-        "vesa": true
-      }
-    ]
+[
+  {
+    "brand": "LG",
+    "model": "ultragear 27gn800-b",
+    "connector": "Display Port",
+    "type": "Output Device",
+    "price": "600",
+    "color": "Black & Red",
+    "image": "images/monitors/lg.jpg",
+    "panel": "IPS",
+    "resolution": { "horiResolution": 2560, "vertResolution": 1440 },
+    "refreshRate": "144Hz",
+    "responseTime": "1ms",
+    "colorDepth": "24 bit",
+    "vesa": "Yes"
+  },
+  {
+    "brand": "Dell",
+    "model": "Alienware",
+    "connector": "Display Port",
+    "type": "Output Device",
+    "price": "600",
+    "color": "Black & Grey",
+    "image": "images/monitors/dell.jpg",
+    "panel": "QD-OLED",
+    "resolution": { "horiResolution": 3440, "vertResolution": 1440 },
+    "refreshRate": "175Hz",
+    "responseTime": "1ms",
+    "colorDepth": "24 bit",
+    "vesa": "Yes"
+  },
+  {
+    "brand": "Gigabyte",
+    "model": "M32U",
+    "connector": "Display Port",
+    "type": "Output Device",
+    "price": "600",
+    "color": "Black & Grey",
+    "image": "images/monitors/gigabyte.jpg",
+    "panel": "IPS",
+    "resolution": { "horiResolution": 3840, "vertResolution": 2260 },
+    "refreshRate": "144Hz",
+    "responseTime": "1ms",
+    "colorDepth": "24 bit",
+    "vesa": "Yes"
+  },
+  {
+    "brand": "ViewSonic",
+    "model": "XG2431",
+    "connector": "Display Port",
+    "type": "Output Device",
+    "price": "600",
+    "color": "Black & Grey",
+    "image": "images/monitors/viewsonic.jpg",
+    "panel": "IPS",
+    "resolution": { "horiResolution": 1920, "vertResolution": 1080 },
+    "refreshRate": "240Hz",
+    "responseTime": "1ms",
+    "colorDepth": "24 bit",
+    "vesa": "Yes"
+  },
+  {
+    "brand": "Acer",
+    "model": "Nitro XF243Y",
+    "connector": "Display Port",
+    "type": "Output Device",
+    "price": "600",
+    "color": "Black & Grey",
+    "image": "images/monitors/acer.jpg",
+    "panel": "IPS",
+    "resolution": { "horiResolution": 1920, "vertResolution": 1080 },
+    "refreshRate": "165Hz",
+    "responseTime": "1ms",
+    "colorDepth": "24 bit",
+    "vesa": "Yes"
   }
+]

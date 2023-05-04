@@ -1,32 +1,142 @@
+@import url("https://dev-cats.github.io/code-snippets/JetBrainsMono.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
+/* * {
+  border: 1px dotted red;
+} */
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  background-color: #161f27;
+  color: white;
+  font-family: JetBrains Mono;
+  max-width: 1600px;
+  margin: 0 auto;
+  border-color: red 1px;
 }
-nav {
-  background-color: #333;
-  color: #fff;
+.navContainer {
+  padding: 20px 0 0 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 8px;
+}
+
+.navButton {
+  height: 55px;
+  width: 200px;
+  font-size: 17px;
+  font-weight: 400px;
+  background-color: #24333f;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #ffffff2c;
+  transition: 0.3s;
+}
+.navButton:hover {
+  background-color: #2b3d4c;
+  border-radius: 10px;
+  border: 2px solid #ffffff44;
+}
+
+.navButton > i {
+  font-size: 20px;
+  color: white;
+  margin: 0 10px 0 0;
+}
+
+.userAgentContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.initInfo {
+  display: flex;
+  justify-self: center;
+}
+
+.userAgentImgContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.browserContent,
+.osContent {
+  background-color: #24333f;
+  width: 150px;
+  padding: 50px;
+  border-radius: 20px;
+  border: 2px solid #ffffff2c;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
   align-items: center;
-  padding: 10px;
 }
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+
+.ipcontainer {
   display: flex;
+  justify-content: center;
 }
-nav li {
-  margin-right: 20px;
+
+.ipwrapper {
+  display: flex;
+  background-color: #24333f;
+  padding: 20px 10px;
+  width: 35%;
+  justify-content: center;
+  border-radius: 20px;
+  border: 2px solid #ffffff2c;
 }
-nav a {
+
+.boicon {
+  width: 150px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.monitorimg {
+  border-radius: 15px;
+  width: 800px;
+}
+
+#myDropdown,
+#monitorCompairson0,
+#monitorCompairson1 {
   color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  color: var(--form-text);
+  background-color: #161f27;
+  background-color: var(--background);
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
 }
-nav a:hover {
-  color: #ff9900;
+option {
+  background-color: #161f27;
+}
+
+option:hover {
+  background-color: #24333f;
+}
+
+td {
+  padding: 0 50px 0 0;
 }

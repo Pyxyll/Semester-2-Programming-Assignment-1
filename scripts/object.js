@@ -21,6 +21,67 @@ class Monitor extends ComputerPeripherals {
         this.vesa = vesa;
 
     }
+    display() {
+        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
+        let monitorRow = document.getElementById("monitorTable");
+        monitorRow.innerHTML = `
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Manufacturer</td>
+            <td>${this.manufacturer}</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>${this.model}</td>
+        </tr>
+        <tr>
+            <td>Connection Type</td>
+            <td>${this.connectionType}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${this.type}</td>
+        </tr>
+        <tr>
+            <td>Colour</td>
+            <td>${this.colour}</td>
+        </tr>
+        <tr>
+            <td>Display Type</td>
+            <td>${this.displayTech}</td>
+        </tr>
+        <tr>
+            <td>Resolution</td>
+            <td>${this.horiResolution} x ${this.vertResolution}</td>
+        </tr>
+        <tr>
+            <td>Refresh Rate</td>
+            <td>${this.refreshRate}</td>
+        </tr>
+        <tr>
+            <td>Response Time</td>
+            <td>${this.responseTime}</td>
+        </tr>
+        <tr>
+            <td>Colour Depth</td>
+            <td>${this.colourDepth}</td>
+        </tr>
+        <tr>
+            <td>VESA Compatible</td>
+            <td>${this.vesa}</td>
+        </tr>
+    </tbody>
+        `;
+        let descImage = document.getElementById("monitorImage");
+        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
+    }
+
     checkResolution() {
         let resCheck = null
 
@@ -35,32 +96,13 @@ class Monitor extends ComputerPeripherals {
         document.getElementById("checkResolution").innerHTML = resCheck
 
     }
-    display() {
-        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
-        let monitorRow = document.getElementById("monitorRow");
-        monitorRow.innerHTML = `
-          <td>${this.manufacturer}</td>
-          <td>${this.model}</td>
-          <td>${this.connectionType}</td>
-          <td>${this.type}</td>
-          <td>${this.price}</td>
-          <td>${this.colour}</td>
-          <td>${this.displayTech}</td>
-          <td>${this.horiResolution} x ${this.vertResolution}</td>
-          <td>${this.refreshRate}</td>
-          <td>${this.responseTime}</td>
-          <td>${this.colourDepth}</td>
-          <td>${this.vesa}</td>
-        `;
-        let descImage = document.getElementById("monitorImage");
-        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
-    }
+
     get displayData() {
         return this.display;
     }
 
     get resolutionChecker() {
-        return this.checkResolution();
+        return this.checkResolution;
     }
 
 }
