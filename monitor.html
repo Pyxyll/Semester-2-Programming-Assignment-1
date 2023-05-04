@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/style.css">
-
-
     <title>Document</title>
     <script src="scripts/object.js"></script>
     <script src="scripts/data.js"></script>
@@ -30,32 +28,45 @@
                 class="fi fi-rr-gamepad"></i>Gamepad</button>
 
     </div>
-    <h1>Your Screen Resolution is: <span id="resolution"></span> </h1>
-    <h1>Your Browser Viewport is: <span id="viewport"></span> </h1>
-    <div id="data"></div>
-    <select id="myDropdown" onchange="monitorSelection()">
-        <option value="option0">Select Monitor</option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-        <option value="option4">Option 4</option>
-        <option value="option5">Option 5</option>
-    </select>
 
-
-
-
-    <div class="parent">
-        <div class="div1">
+    <div class="monitorContainer">
+        <select id="myDropdown" onchange="monitorSelection()">
+            <option value="option0">Select Monitor</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+            <option value="option5">Option 5</option>
+        </select>
+        <div class="modelContainer">
             <h2 id="monitor-title"></h2>
-            <table id="monitorTable"></table>
         </div>
-        <div class="div2">
+        <div class="monitorImageWrapper">
             <div id="monitorImage"></div>
         </div>
-    </div>
-    <div id="checkResolution"></div>
+        <div class="monitorTableWrapper">
+            <table id="monitorTable"></table>
+        </div>
+        <div class="rezcheck">
+            <div id="checkResolution"></div>
+        </div>
+        <!-- <h1>Your Screen Resolution is: <span id="resolution"></span> </h1>
+        <h1>Your Browser Viewport is: <span id="viewport"></span> </h1> -->
 
+
+
+
+
+        <div class="parent">
+            <div class="div1">
+
+            </div>
+            <div class="div2">
+
+            </div>
+        </div>
+
+    </div>
 
     <script src="scripts/script.js"></script>
 

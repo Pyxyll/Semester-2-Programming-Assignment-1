@@ -36,7 +36,7 @@ function monitorSelection() {
 
 
 function clearSelection() {
-    let monitorRow = document.getElementById("monitorTable2");
+    let monitorRow = document.getElementById("monitorTable");
     monitorRow.innerHTML = `
     <thead>
     <tr>
@@ -97,16 +97,16 @@ function clearSelection() {
     document.getElementById("monitor-title").innerHTML = "";
 }
 
-document.getElementById("resolution").innerHTML = screen.width + " x " + screen.height;
+// document.getElementById("resolution").innerHTML = screen.width + " x " + screen.height;
 
 
 
-document.getElementById("viewport").innerHTML = innerWidth + " x " + innerHeight;
-window.addEventListener("resize", () => {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    document.getElementById("viewport").innerHTML = width + " x " + height;
-});
+// document.getElementById("viewport").innerHTML = innerWidth + " x " + innerHeight;
+// window.addEventListener("resize", () => {
+//     const width = window.innerWidth;
+//     const height = window.innerHeight;
+//     document.getElementById("viewport").innerHTML = width + " x " + height;
+// });
 
 
 
