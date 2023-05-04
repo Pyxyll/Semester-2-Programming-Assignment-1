@@ -49,6 +49,10 @@ class Monitor extends ComputerPeripherals {
             <td>${this.type}</td>
         </tr>
         <tr>
+            <td>Price</td>
+            <td>${this.price}</td>
+        </tr>
+        <tr>
             <td>Colour</td>
             <td>${this.colour}</td>
         </tr>
@@ -80,17 +84,22 @@ class Monitor extends ComputerPeripherals {
         `;
         let descImage = document.getElementById("monitorImage");
         descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
+        let img = descImage.querySelector(".monitorimg");
+        img.style.opacity = 0; // set the opacity to 0
+        img.addEventListener("load", () => {
+            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
+        });
     }
 
     checkResolution() {
         let resCheck = null
 
         if (screen.width * screen.height < this.horiResolution * this.vertResolution) {
-            resCheck = "Your Screen Resolution is Less than the " + this.model
+            resCheck = "Your screen of resolution " + screen.width + " x " + screen.height + " is less than the " + this.model
         } else if (screen.width * screen.height > this.horiResolution * this.vertResolution) {
-            resCheck = "Your screen resolution is higher than the " + this.model
+            resCheck = "Your screen of resolution " + screen.width + " x " + screen.height + " is higher than the " + this.model
         } else {
-            resCheck = "Your screen resolution is the same as the " + this.model
+            resCheck = "Your screen of resolution " + screen.width + " x " + screen.height + " is the same as the " + this.model
         }
 
         document.getElementById("checkResolution").innerHTML = resCheck

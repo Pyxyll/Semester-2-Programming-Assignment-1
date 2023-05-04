@@ -10,7 +10,7 @@
 
 </head>
 
-<body onload="setTimeout(getUserIp, 1900)">
+<body onload="setTimeout(getUserIp, 1900), getUserResolution()">
 
     <div class="navContainer">
         <button onclick="location.href='index.html';" class="navButton"><i class="fi fi-rr-wrench-simple"></i>Home
@@ -55,6 +55,16 @@
             <h3 class="ip" id="userIP">Getting IP...</h3>
         </div>
     </div>
+
+    <div class="ipcontainer">
+        <div class="ipwrapper">
+            <h3>Your Browser Viewport is: <span id="viewport"></span> </h3>
+        </div>
+    </div>
+
+
+
+
 
     <script src="scripts/os.js"></script>
 </body>

@@ -92,21 +92,16 @@ function clearSelection() {
 </tbody>
         `;
     let descImage = document.getElementById("monitorImage");
-    descImage.innerHTML = `<img class="monitorimg" />`;
+    descImage.innerHTML = `<img class="monitorimg" src="images/monitors/placeholder.png" />`;
     document.getElementById("checkResolution").innerHTML = "";
-    document.getElementById("monitor-title").innerHTML = "";
+    document.getElementById("monitor-title").innerHTML = `<span class="skeleton"></span>`;
 }
 
-// document.getElementById("resolution").innerHTML = screen.width + " x " + screen.height;
 
 
 
-// document.getElementById("viewport").innerHTML = innerWidth + " x " + innerHeight;
-// window.addEventListener("resize", () => {
-//     const width = window.innerWidth;
-//     const height = window.innerHeight;
-//     document.getElementById("viewport").innerHTML = width + " x " + height;
-// });
+
+
 
 
 

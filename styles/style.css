@@ -79,6 +79,7 @@ body {
 .ipcontainer {
   display: flex;
   justify-content: center;
+  padding: 0 0 20px 0;
 }
 
 .ipwrapper {
@@ -107,6 +108,17 @@ body {
   margin: 20px 0 0 0;
 }
 
+.skeleton::after {
+  display: block;
+  content: "";
+  background: linear-gradient(0.95turn, #24333f, #2f4455);
+  width: 500px;
+  height: 50px;
+  letter-spacing: -20px;
+  border-radius: 15px;
+  border: 2px solid #ffffff0a;
+}
+
 .monitorImageWrapper {
   border-radius: 5px;
 }
@@ -127,20 +139,21 @@ body {
   margin: 0 0 10px 0;
   padding: 20px;
   width: 50%;
+  border: 2px solid #ffffff0a;
 }
 
 .monitorimg {
   border-radius: 15px;
-  width: 800px;
+  width: 100%;
+  transition: opacity 0.2s ease-in-out;
+  border: 2px solid #ffffff0a;
 }
 
 #myDropdown,
 #monitorCompairson0,
 #monitorCompairson1 {
   color: #fff;
-  color: var(--form-text);
   background-color: #161f27;
-  background-color: var(--background);
   font-family: inherit;
   font-size: inherit;
   margin-right: 6px;

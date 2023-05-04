@@ -76,3 +76,15 @@ function getUserIp() {
         .then(ip => document.getElementById("userIP").innerHTML = "Your Public IPV4 is: " + ip)
         .catch(err => console.log(err))
 }
+
+function getUserResolution() {
+    document.getElementById("resolution").innerHTML = screen.width + " x " + screen.height;
+}
+
+
+document.getElementById("viewport").innerHTML = innerWidth + " x " + innerHeight;
+window.addEventListener("resize", () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    document.getElementById("viewport").innerHTML = width + " x " + height;
+});
