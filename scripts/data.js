@@ -379,7 +379,7 @@ let gamepad4 = new Gamepad(
   "Direct-Input",
   17,
   "1300 mAh Built-in",
-  "Analogue"
+  "Digital"
 );
 
 let gamepad5 = new Gamepad(

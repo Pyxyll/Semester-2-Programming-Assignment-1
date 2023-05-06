@@ -149,6 +149,11 @@ body {
   border: 2px solid #ffffff0a;
 }
 
+.monitorimage::after {
+  content: "Loading...";
+  position: absolute;
+}
+
 .selectionDropdown {
   color: #fff;
   background-color: #161f27;

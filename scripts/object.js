@@ -402,23 +402,23 @@ class Gamepad extends ComputerPeripherals {
             <td>${this.colour}</td>
         </tr>
         <tr>
-            <td>Mouse Lighting</td>
+            <td>Stick Type</td>
             <td>${this.stickType}</td>
         </tr>
         <tr>
-            <td>Button Number</td>
+            <td>Input API</td>
             <td>${this.inputAPI}</td>
         </tr>
         <tr>
-            <td>Software</td>
+            <td>Button Number</td>
             <td>${this.buttonNumber}</td>
         </tr>
         <tr>
-            <td>Sensor Type</td>
+            <td>Battery Type</td>
             <td>${this.batteryType}</td>
         </tr>
         <tr>
-            <td>Sensor DPI</td>
+            <td>Twigger Type</td>
             <td>${this.triggerType}</td>
         </tr>
     </tbody>
