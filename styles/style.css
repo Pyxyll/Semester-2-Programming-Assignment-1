@@ -136,7 +136,7 @@ body {
 .monitorTableWrapper,
 .rezcheck {
   background-color: #24333f;
-  margin: 0 0 10px 0;
+  margin: 10px 0 0 0;
   padding: 20px;
   width: 50%;
   border: 2px solid #ffffff0a;
@@ -149,9 +149,7 @@ body {
   border: 2px solid #ffffff0a;
 }
 
-#myDropdown,
-#monitorCompairson0,
-#monitorCompairson1 {
+.selectionDropdown {
   color: #fff;
   background-color: #161f27;
   font-family: inherit;

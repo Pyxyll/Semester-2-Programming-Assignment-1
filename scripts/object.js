@@ -116,8 +116,8 @@ class Monitor extends ComputerPeripherals {
 
 }
 class Keyboard extends ComputerPeripherals {
-    constructor(manufacturer, model, connectionType, type, price, colour, keyboardType, lighting, specialFunction, programSupport, switchType) {
-        super(manufacturer, model, connectionType, type, price, colour);
+    constructor(manufacturer, model, connectionType, type, price, colour, productImage, keyboardType, lighting, specialFunction, programSupport, switchType) {
+        super(manufacturer, model, connectionType, type, price, colour, productImage);
         this.keyboardType = keyboardType;
         this.lighting = lighting;
         this.specialFunction = specialFunction;
@@ -125,27 +125,162 @@ class Keyboard extends ComputerPeripherals {
         this.switchType = switchType;
     }
     display() {
-        document.getElementById("data").innerHTML = this.manufacturer + this.model + this.connectionType + this.type + this.price + this.colour + this.resolution + this.resolution + this.refreshRate + this.responseTime + this.colourDepth + this.vesa
+        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
+        let monitorRow = document.getElementById("monitorTable");
+        monitorRow.innerHTML = `
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Manufacturer</td>
+            <td>${this.manufacturer}</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>${this.model}</td>
+        </tr>
+        <tr>
+            <td>Connection Type</td>
+            <td>${this.connectionType}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${this.type}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>${this.price}</td>
+        </tr>
+        <tr>
+            <td>Colour</td>
+            <td>${this.colour}</td>
+        </tr>
+        <tr>
+            <td>Keyboard Type</td>
+            <td>${this.keyboardType}</td>
+        </tr>
+        <tr>
+            <td>Lighting</td>
+            <td>${this.lighting}</td>
+        </tr>
+        <tr>
+            <td>Function</td>
+            <td>${this.specialFunction}</td>
+        </tr>
+        <tr>
+            <td>Software</td>
+            <td>${this.programSupport}</td>
+        </tr>
+        <tr>
+            <td>Key Switch Type</td>
+            <td>${this.switchType}</td>
+        </tr>
+    </tbody>
+        `;
+        let descImage = document.getElementById("monitorImage");
+        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
+        let img = descImage.querySelector(".monitorimg");
+        img.style.opacity = 0; // set the opacity to 0
+        img.addEventListener("load", () => {
+            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
+        });
 
+    }
+    get displayData() {
+        return this.display;
     }
 }
 class Mouse extends ComputerPeripherals {
-    constructor(manufacturer, model, connectionType, type, price, colour, lighting, buttonNumber, programSupport, sensorType, dpi) {
-        super(manufacturer, model, connectionType, type, price, colour);
+    constructor(manufacturer, model, connectionType, type, price, colour, productImage, lighting, buttonNumber, programSupport, sensorType, dpi, weight) {
+        super(manufacturer, model, connectionType, type, price, colour, productImage);
         this.lighting = lighting;
         this.buttonNumber = buttonNumber;
         this.programSupport = programSupport
         this.sensorType = sensorType;
         this.dpi = dpi;
+        this.weight = weight;
     }
     display() {
-        document.getElementById("data").innerHTML = this.manufacturer + this.model + this.connectionType + this.type + this.price + this.colour + this.resolution + this.resolution + this.refreshRate + this.responseTime + this.colourDepth + this.vesa
+        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
+        let monitorRow = document.getElementById("monitorTable");
+        monitorRow.innerHTML = `
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <td>Manufacturer</td>
+            <td>${this.manufacturer}</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>${this.model}</td>
+        </tr>
+        <tr>
+            <td>Connection Type</td>
+            <td>${this.connectionType}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${this.type}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>€${this.price}</td>
+        </tr>
+        <tr>
+            <td>Colour</td>
+            <td>${this.colour}</td>
+        </tr>
+        <tr>
+            <td>Mouse Lighting</td>
+            <td>${this.lighting}</td>
+        </tr>
+        <tr>
+            <td>Button Number</td>
+            <td>${this.buttonNumber}</td>
+        </tr>
+        <tr>
+            <td>Software</td>
+            <td>${this.programSupport}</td>
+        </tr>
+        <tr>
+            <td>Sensor Type</td>
+            <td>${this.sensorType}</td>
+        </tr>
+        <tr>
+            <td>Sensor DPI</td>
+            <td>${this.dpi}</td>
+        </tr>
+        <tr>
+        <td>Weight</td>
+        <td>${this.weight}g</td>
+    </tr>
+    </tbody>
+        `;
+        let descImage = document.getElementById("monitorImage");
+        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
+        let img = descImage.querySelector(".monitorimg");
+        img.style.opacity = 0; // set the opacity to 0
+        img.addEventListener("load", () => {
+            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
+        });
 
+    }
+    get displayData() {
+        return this.display;
     }
 }
 class AudioInterface extends ComputerPeripherals {
-    constructor(manufacturer, model, connectionType, type, price, colour, phantomPower, microphoneInput, headphoneOutput, speakerOutput, controls) {
-        super(manufacturer, model, connectionType, type, price, colour);
+    constructor(manufacturer, model, connectionType, type, price, colour, productImage, phantomPower, microphoneInput, headphoneOutput, speakerOutput, controls) {
+        super(manufacturer, model, connectionType, type, price, colour, productImage);
         this.phantomPower = phantomPower;
         this.microphoneInput = microphoneInput;
         this.headphoneOutput = headphoneOutput;
@@ -153,13 +288,78 @@ class AudioInterface extends ComputerPeripherals {
         this.controls = controls
     }
     display() {
-        document.getElementById("data").innerHTML = this.manufacturer + this.model + this.connectionType + this.type + this.price + this.colour + this.resolution + this.resolution + this.refreshRate + this.responseTime + this.colourDepth + this.vesa
+        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
+        let monitorRow = document.getElementById("monitorTable");
+        monitorRow.innerHTML = `
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <td>Manufacturer</td>
+            <td>${this.manufacturer}</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>${this.model}</td>
+        </tr>
+        <tr>
+            <td>Connection Type</td>
+            <td>${this.connectionType}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${this.type}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>€${this.price}</td>
+        </tr>
+        <tr>
+            <td>Colour</td>
+            <td>${this.colour}</td>
+        </tr>
+        <tr>
+            <td>Mouse Lighting</td>
+            <td>${this.phantomPower}</td>
+        </tr>
+        <tr>
+            <td>Button Number</td>
+            <td>${this.microphoneInput}</td>
+        </tr>
+        <tr>
+            <td>Software</td>
+            <td>${this.headphoneOutput}</td>
+        </tr>
+        <tr>
+            <td>Sensor Type</td>
+            <td>${this.speakerOutput}</td>
+        </tr>
+        <tr>
+            <td>Sensor DPI</td>
+            <td>${this.controls}</td>
+        </tr>
+    </tbody>
+        `;
+        let descImage = document.getElementById("monitorImage");
+        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
+        let img = descImage.querySelector(".monitorimg");
+        img.style.opacity = 0; // set the opacity to 0
+        img.addEventListener("load", () => {
+            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
+        });
 
     }
+    get displayData() {
+        return this.display;
+    }
 }
-class GamePad extends ComputerPeripherals {
-    constructor(manufacturer, model, connectionType, type, price, colour, stickType, inputAPI, buttonNumber, batteryType, triggerType) {
-        super(manufacturer, model, connectionType, type, price, colour);
+class Gamepad extends ComputerPeripherals {
+    constructor(manufacturer, model, connectionType, type, price, colour, productImage, stickType, inputAPI, buttonNumber, batteryType, triggerType) {
+        super(manufacturer, model, connectionType, type, price, colour, productImage);
         this.stickType = stickType
         this.inputAPI = inputAPI;
         this.buttonNumber = buttonNumber;
@@ -167,8 +367,73 @@ class GamePad extends ComputerPeripherals {
         this.triggerType = triggerType
     }
     display() {
-        document.getElementById("data").innerHTML = this.manufacturer + this.model + this.connectionType + this.type + this.price + this.colour + this.resolution + this.resolution + this.refreshRate + this.responseTime + this.colourDepth + this.vesa
+        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
+        let monitorRow = document.getElementById("monitorTable");
+        monitorRow.innerHTML = `
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <td>Manufacturer</td>
+            <td>${this.manufacturer}</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>${this.model}</td>
+        </tr>
+        <tr>
+            <td>Connection Type</td>
+            <td>${this.connectionType}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${this.type}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>€${this.price}</td>
+        </tr>
+        <tr>
+            <td>Colour</td>
+            <td>${this.colour}</td>
+        </tr>
+        <tr>
+            <td>Mouse Lighting</td>
+            <td>${this.stickType}</td>
+        </tr>
+        <tr>
+            <td>Button Number</td>
+            <td>${this.inputAPI}</td>
+        </tr>
+        <tr>
+            <td>Software</td>
+            <td>${this.buttonNumber}</td>
+        </tr>
+        <tr>
+            <td>Sensor Type</td>
+            <td>${this.batteryType}</td>
+        </tr>
+        <tr>
+            <td>Sensor DPI</td>
+            <td>${this.triggerType}</td>
+        </tr>
+    </tbody>
+        `;
+        let descImage = document.getElementById("monitorImage");
+        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
+        let img = descImage.querySelector(".monitorimg");
+        img.style.opacity = 0; // set the opacity to 0
+        img.addEventListener("load", () => {
+            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
+        });
 
+    }
+    get displayData() {
+        return this.display;
     }
 }
 
