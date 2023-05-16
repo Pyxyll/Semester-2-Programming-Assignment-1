@@ -1,3 +1,6 @@
+/*The purpose of this file is to store all of the data used to create new instances of the objects.
+While there is no database in this project, this file will be treated as one.*/
+
 //monitors
 let monitor1 = new Monitor(
   "LG",

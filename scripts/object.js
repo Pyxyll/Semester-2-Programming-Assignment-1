@@ -1,3 +1,4 @@
+//Computer Peripherals super class instatiation.
 class ComputerPeripherals {
     constructor(manufacturer, model, connectionType, type, price, colour, productImage) {
         this.manufacturer = manufacturer;
@@ -8,7 +9,18 @@ class ComputerPeripherals {
         this.colour = colour
         this.productImage = productImage;
     }
+
+    productImageDisplay() {
+        let descImage = document.getElementById("productImage");
+        descImage.innerHTML = `<img class="productImage" src=${this.productImage} />`
+        let img = descImage.querySelector(".productImage");
+        img.style.opacity = 0; // set the opacity to 0
+        img.addEventListener("load", () => {
+            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
+        });
+    }
 }
+//Computer Peripherals super class instatiation.
 class Monitor extends ComputerPeripherals {
     constructor(manufacturer, model, connectionType, type, price, colour, productImage, displayTech, horiResolution, vertResolution, refreshRate, responseTime, colourDepth, vesa) {
         super(manufacturer, model, connectionType, type, price, colour, productImage);
@@ -22,8 +34,8 @@ class Monitor extends ComputerPeripherals {
 
     }
     display() {
-        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
-        let monitorRow = document.getElementById("monitorTable");
+        document.getElementById("productTitle").innerHTML = `${this.manufacturer} ${this.model}`;
+        let monitorRow = document.getElementById("productTable");
         monitorRow.innerHTML = `
         <thead>
         <tr>
@@ -82,27 +94,22 @@ class Monitor extends ComputerPeripherals {
         </tr>
     </tbody>
         `;
-        let descImage = document.getElementById("monitorImage");
-        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
-        let img = descImage.querySelector(".monitorimg");
-        img.style.opacity = 0; // set the opacity to 0
-        img.addEventListener("load", () => {
-            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
-        });
+
+        this.productImageDisplay()
     }
 
     checkResolution() {
-        let resCheck = null
+        let resCheck
 
         if (screen.width * screen.height < this.horiResolution * this.vertResolution) {
-            resCheck = "Your screen of resolution " + screen.width + " x " + screen.height + " is less than the " + this.model
+            resCheck = `Your screen of resolution ${screen.width} x ${screen.height} is less than the ${this.model}`
         } else if (screen.width * screen.height > this.horiResolution * this.vertResolution) {
-            resCheck = "Your screen of resolution " + screen.width + " x " + screen.height + " is higher than the " + this.model
+            resCheck = `Your screen of resolution ${screen.width} x ${screen.height} is higher than the ${this.model}`
         } else {
-            resCheck = "Your screen of resolution " + screen.width + " x " + screen.height + " is the same as the " + this.model
+            resCheck = `Your screen of resolution ${screen.width} x ${screen.height} is the same as the ${this.model}`
         }
 
-        document.getElementById("checkResolution").innerHTML = resCheck
+        document.getElementById("check").innerHTML = resCheck
 
     }
 
@@ -125,8 +132,9 @@ class Keyboard extends ComputerPeripherals {
         this.switchType = switchType;
     }
     display() {
-        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
-        let monitorRow = document.getElementById("monitorTable");
+
+        document.getElementById("productTitle").innerHTML = this.manufacturer + " " + this.model;
+        let monitorRow = document.getElementById("productTable");
         monitorRow.innerHTML = `
         <thead>
         <tr>
@@ -178,16 +186,13 @@ class Keyboard extends ComputerPeripherals {
         <tr>
             <td>Key Switch Type</td>
             <td>${this.switchType}</td>
-        </tr>
     </tbody>
         `;
-        let descImage = document.getElementById("monitorImage");
-        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
-        let img = descImage.querySelector(".monitorimg");
-        img.style.opacity = 0; // set the opacity to 0
-        img.addEventListener("load", () => {
-            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
-        });
+
+        let keyboardLanguage = navigator.language
+        document.getElementById("check").innerHTML = `Your System Language of ${keyboardLanguage} is <span class="supported"><i class="fi fi-rr-check-circle"></i> Supported </span> `
+
+        this.productImageDisplay()
 
     }
     get displayData() {
@@ -205,8 +210,8 @@ class Mouse extends ComputerPeripherals {
         this.weight = weight;
     }
     display() {
-        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
-        let monitorRow = document.getElementById("monitorTable");
+        document.getElementById("productTitle").innerHTML = `${this.manufacturer} ${this.model}`;
+        let monitorRow = document.getElementById("productTable");
         monitorRow.innerHTML = `
         <thead>
         <tr>
@@ -265,13 +270,7 @@ class Mouse extends ComputerPeripherals {
     </tr>
     </tbody>
         `;
-        let descImage = document.getElementById("monitorImage");
-        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
-        let img = descImage.querySelector(".monitorimg");
-        img.style.opacity = 0; // set the opacity to 0
-        img.addEventListener("load", () => {
-            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
-        });
+        this.productImageDisplay()
 
     }
     get displayData() {
@@ -288,8 +287,8 @@ class AudioInterface extends ComputerPeripherals {
         this.controls = controls
     }
     display() {
-        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
-        let monitorRow = document.getElementById("monitorTable");
+        document.getElementById("productTitle").innerHTML = `${this.manufacturer} ${this.model}`;
+        let monitorRow = document.getElementById("productTable");
         monitorRow.innerHTML = `
         <thead>
         <tr>
@@ -344,13 +343,8 @@ class AudioInterface extends ComputerPeripherals {
         </tr>
     </tbody>
         `;
-        let descImage = document.getElementById("monitorImage");
-        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
-        let img = descImage.querySelector(".monitorimg");
-        img.style.opacity = 0; // set the opacity to 0
-        img.addEventListener("load", () => {
-            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
-        });
+
+        this.productImageDisplay()
 
     }
     get displayData() {
@@ -367,8 +361,8 @@ class Gamepad extends ComputerPeripherals {
         this.triggerType = triggerType
     }
     display() {
-        document.getElementById("monitor-title").innerHTML = this.manufacturer + " " + this.model;
-        let monitorRow = document.getElementById("monitorTable");
+        document.getElementById("productTitle").innerHTML = `${this.manufacturer} ${this.model}`;
+        let monitorRow = document.getElementById("productTable");
         monitorRow.innerHTML = `
         <thead>
         <tr>
@@ -423,13 +417,7 @@ class Gamepad extends ComputerPeripherals {
         </tr>
     </tbody>
         `;
-        let descImage = document.getElementById("monitorImage");
-        descImage.innerHTML = `<img class="monitorimg" src=${this.productImage} />`
-        let img = descImage.querySelector(".monitorimg");
-        img.style.opacity = 0; // set the opacity to 0
-        img.addEventListener("load", () => {
-            img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
-        });
+        this.productImageDisplay()
 
     }
     get displayData() {

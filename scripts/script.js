@@ -1,6 +1,6 @@
 
 function monitorSelection() {
-    let dropdown = document.getElementById("myDropdown");
+    let dropdown = document.getElementById("monitorDropdown");
     let selectedOption = dropdown.options[dropdown.selectedIndex].value;
 
     switch (selectedOption) {
@@ -151,14 +151,14 @@ function gamepadSelection() {
 
 
 function clearSelection() {
-    let monitorRow = document.getElementById("monitorTable");
+    let monitorRow = document.getElementById("productTable");
     monitorRow.innerHTML = `
 
         `;
-    let descImage = document.getElementById("monitorImage");
-    descImage.innerHTML = `<img class="monitorimg" src="images/monitors/placeholder.png" />`;
-    document.getElementById("checkResolution").innerHTML = "";
-    document.getElementById("monitor-title").innerHTML = `<span class="skeleton"></span>`;
+    let descImage = document.getElementById("productImage");
+    descImage.innerHTML = `<img class="productImage" src="images/monitors/placeholder.png" />`;
+    document.getElementById("check").innerHTML = "";
+    document.getElementById("productTitle").innerHTML = `<span class="skeleton"></span>`;
 }
 
 

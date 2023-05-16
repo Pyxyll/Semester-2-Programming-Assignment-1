@@ -76,13 +76,13 @@ body {
   align-items: center;
 }
 
-.ipcontainer {
+.infocontainer {
   display: flex;
   justify-content: center;
   padding: 0 0 20px 0;
 }
 
-.ipwrapper {
+.infowrapper {
   display: flex;
   background-color: #24333f;
   padding: 20px 10px;
@@ -96,8 +96,9 @@ body {
   width: 150px;
 }
 
-/* Monitor Styling */
-.monitorContainer {
+/* Products styling */
+.productContainer {
+  margin: 50px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,7 +112,7 @@ body {
 .skeleton::after {
   display: block;
   content: "";
-  background: linear-gradient(0.95turn, #24333f, #2f4455);
+  background-color: #161f27;
   width: 500px;
   height: 50px;
   letter-spacing: -20px;
@@ -119,22 +120,19 @@ body {
   border: 2px solid #ffffff0a;
 }
 
-.monitorImageWrapper {
+.productImageWrapper,
+.productTableWrapper {
   border-radius: 5px;
 }
 
-.monitorTableWrapper {
-  border-radius: 5px;
-}
-
-.rezcheck {
+.extraContainer {
   border-radius: 5px 5px 20px 20px;
 }
 
 .modelContainer,
-.monitorImageWrapper,
-.monitorTableWrapper,
-.rezcheck {
+.productImageWrapper,
+.productTableWrapper,
+.extraContainer {
   background-color: #24333f;
   margin: 10px 0 0 0;
   padding: 20px;
@@ -142,16 +140,11 @@ body {
   border: 2px solid #ffffff0a;
 }
 
-.monitorimg {
+.productImage {
   border-radius: 15px;
   width: 100%;
   transition: opacity 0.2s ease-in-out;
   border: 2px solid #ffffff0a;
-}
-
-.monitorimage::after {
-  content: "Loading...";
-  position: absolute;
 }
 
 .selectionDropdown {
@@ -176,4 +169,8 @@ option:hover {
 
 td {
   padding: 0 50px 0 0;
+}
+
+.supported {
+  color: rgb(0, 255, 0);
 }
