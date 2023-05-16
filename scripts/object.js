@@ -10,6 +10,7 @@ class ComputerPeripherals {
         this.productImage = productImage;
     }
 
+    //product image display method
     productImageDisplay() {
         let descImage = document.getElementById("productImage");
         descImage.innerHTML = `<img class="productImage" src=${this.productImage} />`
@@ -18,9 +19,10 @@ class ComputerPeripherals {
         img.addEventListener("load", () => {
             img.style.opacity = 1; // set the opacity back to 1 when the new image has loaded
         });
+
     }
 }
-//Computer Peripherals super class instatiation.
+//Computer Peripherals monitor sub class instatiation.
 class Monitor extends ComputerPeripherals {
     constructor(manufacturer, model, connectionType, type, price, colour, productImage, displayTech, horiResolution, vertResolution, refreshRate, responseTime, colourDepth, vesa) {
         super(manufacturer, model, connectionType, type, price, colour, productImage);
@@ -97,7 +99,7 @@ class Monitor extends ComputerPeripherals {
 
         this.productImageDisplay()
     }
-
+    //check resolution against users resolution.
     checkResolution() {
         let resCheck
 
@@ -122,6 +124,7 @@ class Monitor extends ComputerPeripherals {
     }
 
 }
+//Computer Peripherals keyboard sub class instatiation.
 class Keyboard extends ComputerPeripherals {
     constructor(manufacturer, model, connectionType, type, price, colour, productImage, keyboardType, lighting, specialFunction, programSupport, switchType) {
         super(manufacturer, model, connectionType, type, price, colour, productImage);
@@ -199,6 +202,8 @@ class Keyboard extends ComputerPeripherals {
         return this.display;
     }
 }
+
+//Computer Peripherals mouse sub class instatiation.
 class Mouse extends ComputerPeripherals {
     constructor(manufacturer, model, connectionType, type, price, colour, productImage, lighting, buttonNumber, programSupport, sensorType, dpi, weight) {
         super(manufacturer, model, connectionType, type, price, colour, productImage);
@@ -277,6 +282,7 @@ class Mouse extends ComputerPeripherals {
         return this.display;
     }
 }
+//Computer Peripherals audio interface sub class instatiation.
 class AudioInterface extends ComputerPeripherals {
     constructor(manufacturer, model, connectionType, type, price, colour, productImage, phantomPower, microphoneInput, headphoneOutput, speakerOutput, controls) {
         super(manufacturer, model, connectionType, type, price, colour, productImage);
@@ -351,6 +357,8 @@ class AudioInterface extends ComputerPeripherals {
         return this.display;
     }
 }
+
+//Computer Peripherals gamepad sub class instatiation.
 class Gamepad extends ComputerPeripherals {
     constructor(manufacturer, model, connectionType, type, price, colour, productImage, stickType, inputAPI, buttonNumber, batteryType, triggerType) {
         super(manufacturer, model, connectionType, type, price, colour, productImage);
