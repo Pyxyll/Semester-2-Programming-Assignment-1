@@ -160,13 +160,3 @@ function clearSelection() {
     document.getElementById("check").innerHTML = "";
     document.getElementById("productTitle").innerHTML = `<span class="skeleton"></span>`;
 }
-
-
-
-
-
-
-
-
-
-

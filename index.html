@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
-  </head>
 
-  <body onload="setTimeout(getUserIp, 1900)">
-    <div class="navContainer">
-      <button onclick="location.href='index.html';" class="navButton">
-        <i class="fi fi-rr-wrench-simple"></i>Home
-      </button>
-      <button onclick="location.href='monitor.html';" class="navButton">
-        <i class="fi fi-rr-screen"></i>Monitors
-      </button>
-      <button onclick="location.href='keyboard.html';" class="navButton">
-        <i class="fi fi-rr-keyboard"></i>Keyboards
-      </button>
-      <button onclick="location.href='mice.html';" class="navButton">
-        <i class="fi fi-rr-mouse"></i>Mice
-      </button>
-      <button onclick="location.href='audiointerface.html';" class="navButton">
-        <i class="fi fi-rr-volume"></i>Audio
-      </button>
-      <button onclick="location.href='gamepad.html';" class="navButton">
-        <i class="fi fi-rr-gamepad"></i>Gamepad
-      </button>
+<head>
+  <meta charset="UTF-8" />
+  <title>Dylan Collins (20101387) - Home</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+</head>
+
+<body onload="setTimeout(getUserIp, 1900)">
+  <div class="navContainer">
+    <button onclick="location.href='index.html';" class="navButton">
+      <i class="fi fi-rr-wrench-simple"></i>Home
+    </button>
+    <button onclick="location.href='monitor.html';" class="navButton">
+      <i class="fi fi-rr-screen"></i>Monitors
+    </button>
+    <button onclick="location.href='keyboard.html';" class="navButton">
+      <i class="fi fi-rr-keyboard"></i>Keyboards
+    </button>
+    <button onclick="location.href='mice.html';" class="navButton">
+      <i class="fi fi-rr-mouse"></i>Mice
+    </button>
+    <button onclick="location.href='audiointerface.html';" class="navButton">
+      <i class="fi fi-rr-volume"></i>Audio
+    </button>
+    <button onclick="location.href='gamepad.html';" class="navButton">
+      <i class="fi fi-rr-gamepad"></i>Gamepad
+    </button>
+  </div>
+
+  <div class="userAgentContainer">
+    <div class="initInfo">
+      <h2 onload="getOperatingSystem()">
+        You are using <span id="browserName"></span> on
+        <span id="osName"></span>
+        <span id="version"></span>
+      </h2>
     </div>
+  </div>
 
-    <div class="userAgentContainer">
-      <div class="initInfo">
-        <h2 onload="getOperatingSystem()">
-          You are using <span id="browserName"></span> on
-          <span id="osName"></span>
-          <span id="version"></span>
-        </h2>
-      </div>
+  <div class="userAgentImgContainer">
+    <div class="browserContent">
+      <h3>Browser:</h3>
+      <div id="browserImage"></div>
     </div>
-
-    <div class="userAgentImgContainer">
-      <div class="browserContent">
-        <h3>Browser:</h3>
-        <div id="browserImage"></div>
-      </div>
-      <div class="osContent">
-        <h3>OS:</h3>
-        <div id="operatingSystemImage"></div>
-      </div>
+    <div class="osContent">
+      <h3>OS:</h3>
+      <div id="operatingSystemImage"></div>
     </div>
+  </div>
 
-    <div class="infocontainer">
-      <div class="infowrapper">
-        <h3 class="ip" id="userIP">Getting IP...</h3>
-      </div>
+  <div class="infocontainer">
+    <div class="infowrapper">
+      <h3 class="ip" id="userIP">Getting IP...</h3>
     </div>
+  </div>
 
-    <div class="infocontainer">
-      <div class="infowrapper">
-        <h3>Your Browser Viewport is: <span id="viewport"></span></h3>
-      </div>
+  <div class="infocontainer">
+    <div class="infowrapper">
+      <h3>Your Browser Viewport is: <span id="viewport"></span></h3>
     </div>
+  </div>
 
-    <div class="infocontainer">
-      <div class="infowrapper">
-        <h3>Your Current Time is: <span id="time"></span></h3>
-      </div>
+  <div class="infocontainer">
+    <div class="infowrapper">
+      <h3>Your Current Time is: <span id="time"></span></h3>
     </div>
+  </div>
 
-    <script src="scripts/os.js"></script>
-  </body>
+  <script src="scripts/os.js"></script>
+</body>
+
 </html>

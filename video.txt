@@ -1,0 +1,21 @@
+1. Index
+=> Browser
+=> Operating System
+=> IP
+=> Viewport
+=> Time
+
+2. Classes 
+=> Super Class
+=> Sub Classes
+=> Display Methods
+=> Inheritence
+=> Getters
+=> DOM
+
+3. Object Data 
+=> Object Instatiation
+
+4. Object Display 
+=> Switch Case
+=> Clear Selection

@@ -38,7 +38,6 @@ document.getElementById("osName").innerHTML = OSName;
 console.log("Operating System: " + OSName);
 
 
-
 /*UserAgent Browser detection using a switch case. As some browsers use the same rendering engine and edge is based on chromium, some extra logic was needed for some to detect properly. this Switch case will look at the data within navigator.userAgent and if it sees certain index it will change the output to the HTML.*/
 let browserName;
 const browserAgent = navigator.userAgent;
@@ -102,13 +101,13 @@ window.addEventListener("resize", () => {
     document.getElementById("viewport").innerHTML = width + " x " + height;
 });
 
-/*this function is to display the time in a 24hr format, the seconds will update every second. As it will display 1, 2, 3 etc instead of 01, 02, 03 etc, and if else is used to check if the seconds vvalue is less than 10 and add a 0 before the read seconds value.*/
+/*this function is to display the time in a 24hr format, the seconds will update every second. As it will display 1, 2, 3 etc instead of 01, 02, 03 etc, and if else is used to check if the seconds value is less than 10 and adds a 0 before the read seconds value.*/
 function updateTime() {
-    var date = new Date();
+    let date = new Date();
     if (date.getSeconds() < 10) {
         var current_time = date.getHours() + ":" + date.getMinutes() + ":" + "0" + date.getSeconds();
     } else {
-        var current_time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+        current_time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
     }
 
     document.getElementById("time").innerHTML = current_time;
